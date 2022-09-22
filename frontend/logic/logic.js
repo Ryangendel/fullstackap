@@ -7,7 +7,7 @@ fetch("/api/users/ryan")
 })
 
 
-
+function submitData(){
 const requestOptions = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -19,3 +19,4 @@ fetch('/api/adduser', requestOptions)
     .then(data => {
         alert("datahas been added")
     });
+}
