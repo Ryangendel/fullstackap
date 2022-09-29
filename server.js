@@ -76,10 +76,13 @@ app.post("/api/adduser", (req, res) => {
 app.get("/all", async (req, res) => {
   var data = [];
   try {
-    data = await collection.find({}).toArray();
+    data = await Transactions.find({}).toArray();
     console.log(data);
   } catch (error) {
     if (error) {
+      console.log("------------------------------")
+      console.log(data)
+      console.log("------------------------------")
       console.log(`Error worth logging: ${error}`); // special case for some reason
     }
     throw error; // still want to crash
