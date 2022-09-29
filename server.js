@@ -79,7 +79,7 @@ app.get("/all", async (req, res) => {
     data = await collection.find({}).toArray();
     console.log(data);
   } catch (error) {
-    if (error instanceof MongoServerError) {
+    if (error) {
       console.log(`Error worth logging: ${error}`); // special case for some reason
     }
     throw error; // still want to crash
