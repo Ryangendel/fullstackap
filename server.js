@@ -76,7 +76,7 @@ app.post("/api/adduser", (req, res) => {
 app.get("/all", async (req, res) => {
   var data = [];
   try {
-    data = await Transactions.find({}).toArray();
+    data = await Transactions.find({})
     console.log(data);
   } catch (error) {
     if (error) {
